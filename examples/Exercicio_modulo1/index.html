@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app='MsgApp'>
+
+<style>
+    .corVermelha {
+        color: red;
+    }
+    .corAzul {
+        color: blue;
+    }
+</style>
+
+<head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style>
+        body {
+            font-size: 1.2em;
+        }
+    </style>
+    <title>Exercício Módulo 1</title>
+</head>
+
+<body ng-controller='MsgController'>
+    <h3>Escreva, separando por vírgula, os itens que você come no almoço</h3>
+
+    <div>
+        <input type="text" ng-model="entrada">
+        <br>
+        <br>
+        <button ng-click="verificar()">Verifique se é demais</button>
+        <br>
+
+    </div>
+    <br>
+
+    <div ng-class="{ 'corVermelha': vermelho, 'corAzul': azul }">
+    {{mensagem}}
+    </div>
+</body>
+
+</html>
